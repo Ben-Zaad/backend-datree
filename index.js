@@ -20,12 +20,10 @@ app.get('/super-hero/:name', (req, result) => {
     } catch (error) {
         console.log("ERROR in get superhero by name", error.message);
     }
-    console.log("lastHerosSearched", lastHerosSearched);
 })
 
 app.get('/last-searched', (req, result) => {
     result.send(lastHerosSearched);
-    console.log("lastHerosSearched", lastHerosSearched);
 })
 
 app.listen(port, () => {
